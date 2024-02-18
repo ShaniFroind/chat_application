@@ -63,12 +63,12 @@ def read_file(path):
 
 @app.route('/', methods=['GET'])
 def welcome():
-   return read_file('Welcome.html')
+   return read_file('templates/Welcome.html')
 
 
 @app.route('/<room>', methods=['GET'])
 def create_chat(room):
-   return  read_file('index.html')
+   return  read_file('templates/index.html')
 
 @app.route('/api/chat/<room>', methods=['POST'])
 def save_data(room):
